@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   plugins: [
     'gatsby-image',
@@ -7,8 +9,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: 'g1ecbu0htf91',
-        accessToken: '0OnSqoRx81vzRSC63TWcdsFmWtGT4biPxY3HQ76cpX0',
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         downloadLocal: true
       }
     }
